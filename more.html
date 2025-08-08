@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More - Bulky Page</title>
+    <link rel="stylesheet" href="more.css">
+    <!-- Responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with navigation and animated SVG wave -->
+    <header>
+        <h1>More Information</h1>
+        <svg class="header-wave" viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#6c63ff" />
+        </svg>
+    </header>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="more.html" class="active">More</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <h2>About This Website</h2>
+            <p>
+                Welcome to the "More" page! Here you'll find extra information and features.
+            </p>
+            <svg width="60" height="60" viewBox="0 0 80 80">
+                <circle cx="40" cy="40" r="35" fill="#f3f3f3" stroke="#6c63ff" stroke-width="4"/>
+                <text x="40" y="48" text-anchor="middle" font-size="32" fill="#6c63ff" font-family="Arial">i</text>
+            </svg>
+            <!-- Animated counter for fun -->
+            <div class="counter-box">
+                <span class="counter" data-target="250">0</span>
+                <span class="counter-label">Happy Users</span>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section class="section features" id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Guides and tutorials</li>
+                <li>Downloadable resources</li>
+                <li>FAQ</li>
+                <li>Contact info</li>
+                <li>Interactive gallery</li>
+                <li>Live chat (coming soon!)</li>
+            </ul>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+            </div>
+            <small>80% of features implemented</small>
+            <!-- Downloadable resource -->
+            <div class="download-section">
+                <a href="sample.pdf" download class="download-btn">Download Sample PDF</a>
+            </div>
+        </section>
+        <!-- Gallery Section -->
+        <section class="section gallery" id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="rrr.png" alt="Gallery Image 1" class="gallery-img" data-img="1">
+                <img src="mmmm.jpeg" alt="Gallery Image 2" class="gallery-img" data-img="2">
+                <img src="daily.jpeg" alt="Gallery Image 3" class="gallery-img" data-img="3">
+                <img src="images.jpeg" alt="Gallery Image 4" class="gallery-img" data-img="4">
+                <img src="download.jpeg" alt="Gallery Image 5" class="gallery-img" data-img="5">
+            </div>
+            <!-- Modal for enlarged images -->
+            <div class="modal" id="galleryModal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg" src="" alt="Enlarged Gallery Image">
+                <div id="caption"></div>
+            </div>
+            <style>
+                .gallery-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                    gap: 16px;
+                }
+                .gallery-img {
+                    width: 160px;
+                    height: 120px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                    transition: transform 0.2s;
+                    display: block;
+                    margin: 0 auto;
+                }
+                .gallery-img:hover {
+                    transform: scale(1.05);
+                }
+            </style>
+        </section>
+        <!-- Testimonials Section -->
+        <section class="section testimonials" id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <p>"This website is amazing! I found everything I needed."</p>
+                    <span>- Alex</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Great resources and very interactive."</p>
+                    <span>- Jamie</span>
+                </div>
+                <div class="testimonial">
+                    <p>"The gallery is so cool and easy to use!"</p>
+                    <span>- Morgan</span>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="prev-testimonial">&lt;</button>
+                <button class="next-testimonial">&gt;</button>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="section faq" id="faq">
+            <h2>FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">How do I contact support?</button>
+                    <div class="faq-answer">
+                        <p>Use the contact form below or email us at support@example.com.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Where can I find tutorials?</button>
+                    <div class="faq-answer">
+                        <p>All tutorials are in the Features section and as PDFs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is my data secure?</button>
+                    <div class="faq-answer">
+                        <p>Yes, we use industry-standard security practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="map-container">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=0.0,0.0,0.1,0.1&amp;layer=mapnik"
+                    style="border:1px solid #ccc" width="100%" height="150"></iframe>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Your Website Name. All rights reserved.
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a> |
+            <a href="#terms">Terms of Service</a>
+        </div>
+        <!-- Social media icons (SVG) -->
+        <div class="social-icons">
+            <a href="#" aria-label="Twitter">
+                <svg width="24" height="24" fill="#6c63ff"><circle cx="12" cy="12" r="10"/><text x="12" y="17" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">T</text></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+                <svg width="24" height="24" fill="#6c63ff"><circle cx="12" cy="12" r="10"/><text x="12" y="17" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">F</text></svg>
+            </a>
+        </div>
+    </footer>
+    <!-- JavaScript for interactivity -->
+    <script>
+        // FAQ collapsible answers
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('open');
+                let answer = this.nextElementSibling;
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+        // Gallery modal interactivity
+        const modal = document.getElementById('galleryModal');
+        const modalImg = document.getElementById('modalImg');
+        const captionText = document.getElementById('caption');
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            });
+        });
+        document.querySelector('.modal .close').onclick = function() {
+            modal.style.display = "none";
+        };
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Contact form (demo only)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting us!');
+            this.reset();
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animated counter
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            const updateCounter = () => {
+                const target = +counter.getAttribute('data-target');
+                const c = +counter.innerText;
+                const increment = target / 100;
+                if (c < target) {
+                    counter.innerText = `${Math.ceil(c + increment)}`;
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCounter();
+        });
+
+        // Testimonial slider
+        const testimonials = document.querySelectorAll('.testimonial');
+        let currentTestimonial = 0;
+        document.querySelector('.next-testimonial').onclick = function() {
+            testimonials[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
+        };
+        document.querySelector('.prev-testimonial').onclick = function() {
+            testimonials[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
+        };
+    </script>
+    <script src="more.js"></script>
+</body>
+</html>

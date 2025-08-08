@@ -1,0 +1,165 @@
+/* === Global Reset and Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* === Header Section === */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0000; /* Red accent */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+.cta-btn {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* === Hero Section === */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+    background-size: auto;
+    background-image: url('black skull.jpg');
+    background-position: center bottom;
+    background-position-x: auto;
+    background-position-y: auto;
+
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    background-image: url('black skull.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: none;
+}
+.availability {
+  font-size: 18px;
+  color: #ff0000;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.process-btn {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+/* === Services Bar === */
+.services-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #111;
+  padding: 20px;
+  font-weight: bold;
+  color: #ff0000;
+  text-transform: uppercase;
+}
+
+/* === About Section === */
+.about {
+  padding: 40px 20px;
+  background-color: #222;
+  text-align: center;
+}
+
+/* === Footer Section === */
+footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff0000;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta-btn,
+  .process-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
