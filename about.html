@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        header {
+            background: #000;
+            color: #ff0000;
+            padding: 30px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #ff0000;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a.active, nav a:hover {
+            background: #ff0000;
+            color: #000;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #000;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(255,0,0,0.12);
+            color: #fff;
+        }
+        section h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #ff0000;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-top: 35px;
+            color: #ff0000;
+        }
+        section p, section ul {
+            font-size: 1.25em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        section ul li {
+            color: #ff0000;
+        }
+        section a {
+            color: #ff0000;
+            text-decoration: underline;
+        }
+        footer {
+            background: #000;
+            color: #ff0000;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 1.1em;
+            margin-top: 40px;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 15px;
+            }
+            section h1 {
+                font-size: 2em;
+            }
+            section h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>About Us</h1>
+            <p>
+                Welcome to our website! We are dedicated to providing quality content and resources to our visitors.
+            </p>
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to deliver valuable information and services that help our users achieve their goals.
+            </p>
+            <h2>Our Team</h2>
+            <p>
+                Our passionate team consists of experts in various fields, working together to bring you the best experience possible.
+            </p>
+            <h2>Our Values</h2>
+            <ul style="font-size:1.15em; margin-bottom:20px;">
+                <li>Integrity</li>
+                <li>Innovation</li>
+                <li>Customer Focus</li>
+                <li>Continuous Improvement</li>
+            </ul>
+            <h2>Contact</h2>
+            <p>
+                If you have any questions, feel free to <a href="mailto:info@example.com">contact us</a>.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

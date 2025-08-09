@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Contact</title>
+
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-container {
+            background: rgba(30, 0, 0, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(255,0,0,0.3);
+            padding: 40px 32px;
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        h1 {
+            color: #ff1a1a;
+            text-align: center;
+            margin-bottom: 24px;
+            letter-spacing: 2px;
+            font-size: 2.2em;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ff1a1a;
+            font-weight: 500;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: none;
+            border-radius: 8px;
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 1em;
+            transition: box-shadow 0.2s;
+            box-shadow: 0 0 0 0 #ff1a1a;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #ff1a1a;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #ff1a1a 0%, #b30000 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #b30000 0%, #ff1a1a 100%);
+        }
+        .success, .error {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 1em;
+            display: none;
+        }
+        .success {
+            color: #ff1a1a;
+        }
+        .error {
+            color: #fff;
+            background: #ff1a1a;
+            border-radius: 6px;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        
+<form
+  action="https://formspree.io/f/xovlyvez"
+  method="POST"
+>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <!-- Your existing inputs go here -->
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required maxlength="50" placeholder="Your Name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required maxlength="50" placeholder="Your Email">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required maxlength="500" rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+            <div class="success" id="successMsg">Thank you! Your message has been sent.</div>
+            <div class="error" id="errorMsg">Please fill all fields correctly.</div>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('contactForm');
+        const successMsg = document.getElementById('successMsg');
+        const errorMsg = document.getElementById('errorMsg');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const message = form.message.value.trim();
+
+            // Simple validation
+            if (name.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || message.length < 5) {
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            // Simulate sending (replace with AJAX/fetch for real backend)
+            setTimeout(() => {
+                form.reset();
+                successMsg.style.display = 'block';
+            }, 700);
+        });
+    </script>
+    
+</body>
+</html>
